@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DFF652592F0EAF560051DD62 /* KeyboardShortcuts in Frameworks */ = {isa = PBXBuildFile; productRef = DFF652582F0EAF560051DD62 /* KeyboardShortcuts */; };
+		AD00E4F13286E1AF066CE0E7 /* Pods_DuMemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81FBD91EB96DA59ECA940D5A /* Pods_DuMemo.framework */; };
+		DFE672022F1FC56400438350 /* PythonKit in Frameworks */ = {isa = PBXBuildFile; productRef = DFE672012F1FC56400438350 /* PythonKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0CE2EDC85303F1AFA275BEC7 /* Pods-DuMemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DuMemo.release.xcconfig"; path = "Target Support Files/Pods-DuMemo/Pods-DuMemo.release.xcconfig"; sourceTree = "<group>"; };
+		81FBD91EB96DA59ECA940D5A /* Pods_DuMemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DuMemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3E74B62F1C2B085F8876D0D /* Pods-DuMemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DuMemo.debug.xcconfig"; path = "Target Support Files/Pods-DuMemo/Pods-DuMemo.debug.xcconfig"; sourceTree = "<group>"; };
 		DFF6523C2F0EAB250051DD62 /* DuMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DuMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -27,18 +31,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFF652592F0EAF560051DD62 /* KeyboardShortcuts in Frameworks */,
+				AD00E4F13286E1AF066CE0E7 /* Pods_DuMemo.framework in Frameworks */,
+				DFE672022F1FC56400438350 /* PythonKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AE8FF181C5321925CD95BEB9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				81FBD91EB96DA59ECA940D5A /* Pods_DuMemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B7AEF2EE6B8F12BE3313858A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A3E74B62F1C2B085F8876D0D /* Pods-DuMemo.debug.xcconfig */,
+				0CE2EDC85303F1AFA275BEC7 /* Pods-DuMemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		DFF652332F0EAB250051DD62 = {
 			isa = PBXGroup;
 			children = (
 				DFF6523E2F0EAB250051DD62 /* DuMemo */,
 				DFF6523D2F0EAB250051DD62 /* Products */,
+				B7AEF2EE6B8F12BE3313858A /* Pods */,
+				AE8FF181C5321925CD95BEB9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,6 +81,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DFF652472F0EAB250051DD62 /* Build configuration list for PBXNativeTarget "DuMemo" */;
 			buildPhases = (
+				A0778B7B5CE6BEF207D47CA9 /* [CP] Check Pods Manifest.lock */,
 				DFF652382F0EAB250051DD62 /* Sources */,
 				DFF652392F0EAB250051DD62 /* Frameworks */,
 				DFF6523A2F0EAB250051DD62 /* Resources */,
@@ -70,7 +95,7 @@
 			);
 			name = DuMemo;
 			packageProductDependencies = (
-				DFF652582F0EAF560051DD62 /* KeyboardShortcuts */,
+				DFE672012F1FC56400438350 /* PythonKit */,
 			);
 			productName = DuMemo;
 			productReference = DFF6523C2F0EAB250051DD62 /* DuMemo.app */;
@@ -101,7 +126,7 @@
 			mainGroup = DFF652332F0EAB250051DD62;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				DFF652572F0EAF560051DD62 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */,
+				DFE672002F1FC56400438350 /* XCLocalSwiftPackageReference "../project/PythonKit-master" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = DFF6523D2F0EAB250051DD62 /* Products */;
@@ -122,6 +147,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A0778B7B5CE6BEF207D47CA9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DuMemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DFF652382F0EAB250051DD62 /* Sources */ = {
@@ -256,6 +306,7 @@
 		};
 		DFF652482F0EAB250051DD62 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3E74B62F1C2B085F8876D0D /* Pods-DuMemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -263,20 +314,9 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4HV8B4H85F;
-				ENABLE_APP_SANDBOX = YES;
+				ENABLE_APP_SANDBOX = NO;
 				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
-				ENABLE_OUTGOING_NETWORK_CONNECTIONS = NO;
 				ENABLE_PREVIEWS = YES;
-				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
-				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
-				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
-				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
-				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
-				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
-				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
-				ENABLE_RESOURCE_ACCESS_USB = NO;
-				ENABLE_USER_SELECTED_FILES = readwrite;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -298,6 +338,7 @@
 		};
 		DFF652492F0EAB250051DD62 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CE2EDC85303F1AFA275BEC7 /* Pods-DuMemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -305,20 +346,9 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4HV8B4H85F;
-				ENABLE_APP_SANDBOX = YES;
+				ENABLE_APP_SANDBOX = NO;
 				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
-				ENABLE_OUTGOING_NETWORK_CONNECTIONS = NO;
 				ENABLE_PREVIEWS = YES;
-				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
-				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
-				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
-				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
-				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
-				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
-				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
-				ENABLE_RESOURCE_ACCESS_USB = NO;
-				ENABLE_USER_SELECTED_FILES = readwrite;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -361,22 +391,17 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		DFF652572F0EAF560051DD62 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/sindresorhus/KeyboardShortcuts";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.4.0;
-			};
+/* Begin XCLocalSwiftPackageReference section */
+		DFE672002F1FC56400438350 /* XCLocalSwiftPackageReference "../project/PythonKit-master" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "../project/PythonKit-master";
 		};
-/* End XCRemoteSwiftPackageReference section */
+/* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		DFF652582F0EAF560051DD62 /* KeyboardShortcuts */ = {
+		DFE672012F1FC56400438350 /* PythonKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DFF652572F0EAF560051DD62 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */;
-			productName = KeyboardShortcuts;
+			productName = PythonKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

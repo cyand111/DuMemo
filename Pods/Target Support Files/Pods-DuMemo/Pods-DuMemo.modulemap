@@ -1,0 +1,6 @@
+framework module Pods_DuMemo {
+  umbrella header "Pods-DuMemo-umbrella.h"
+
+  export *
+  module * { export * }
+}

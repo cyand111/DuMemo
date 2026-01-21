@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+internal import UniformTypeIdentifiers
 
 struct DuContentView: View {
     @EnvironmentObject var windowViewModel: DuWindowViewModel
@@ -25,6 +26,9 @@ struct DuContentView: View {
         .onHover { hovering in
             windowViewModel.handleHover(hovering)
         }
+        .onDrop(of: [.fileURL], isTargeted: $windowViewModel.isTargeted, perform: { providers in
+            return windowViewModel.handleFileDrop(providers)            
+        })
         .onChange(of: windowViewModel.isExpanded, { oldValue, newValue in
             adjustWindowSize(isExpanding: newValue)
         })
